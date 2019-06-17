@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry excluding="src/" kind="src" path=""/>
+	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.7"/>
+	<classpathentry kind="lib" path="lib/commons-logging-1.1.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/log4j-1.2.17.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/commons-lib-5.6.2.60.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/commons-configuration-1.5.jar"/>
+	<classpathentry kind="lib" path="lib/commons-collections-3.2.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/commons-lang-2.4.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/commons-beanutils.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/commons-codec-1.4.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/commons-httpclient-3.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/ezmorph-1.0.4.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/genericscraper-master-R14.jar123"/>
+	<classpathentry exported="true" kind="lib" path="lib/gson-1.4.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/htmlparser-1.2.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/httpclient-4.2.3.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/httpcore-4.2.3.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/httpmime-4.1.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/json-lib-2.2.1-jdk15.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/json.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/konymidlib.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/log4j-1.2.15.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/scraper.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/servlet-api.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/tagsoup-1.2.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/xalan.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/xsltc.jar"/>
+	<classpathentry kind="lib" path="lib/gateway-lib-7.3.0.3.jar"/>
+	<classpathentry kind="lib" path="lib/middleware-7.3.0.5-middleware-system.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
