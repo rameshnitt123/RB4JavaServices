@@ -1,26 +1,17 @@
 package com.kony.psecu.preprocessor;
-
 import com.konylabs.middleware.common.DataPreProcessor;
 import com.konylabs.middleware.controller.DataControllerRequest;
-import com.konylabs.middleware.dataobject.Param;
 import com.konylabs.middleware.dataobject.Result;
-
 import java.util.HashMap;
-
 import org.apache.log4j.Logger;
 
-import util.PSECUUtil;
-
-public class LoginPreProcessor
-implements DataPreProcessor {
+public class LoginPreProcessor extends BasePreProcessor implements DataPreProcessor {
  private static final Logger LOG = Logger.getLogger(LoginPreProcessor.class.getName());
-
+ @Override
  public boolean execute(HashMap arg0, DataControllerRequest request, Result arg2) throws Exception {
+  super.execute(arg0, request, arg2);
+  LOG.debug("Inside LoginPreProcessor-execute");
   try {
-   PSECUUtil utilObj = new PSECUUtil();
-   String rsaDevice = (String) arg0.get("rsaDevice");
-   arg0.put("rsaDevice", utilObj.modifyRSA(rsaDevice));
-   arg2.setParam(new Param("testParam", "0", "String"));
    
    //==================IP-Address fix============================================//
    String deviceIPAddress=(String) request.getParameter("kony-identity-remote-ip");

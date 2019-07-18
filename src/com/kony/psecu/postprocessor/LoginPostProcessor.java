@@ -19,19 +19,19 @@ public class LoginPostProcessor implements DataPostProcessor {
 		LOG.debug("setting securityDataSet---START");
 		Record securityDataSet = new com.konylabs.middleware.dataobject.Record();
 		securityDataSet.setID("core_security_attributes");
+		Record userDataSet = new com.konylabs.middleware.dataobject.Record();
+		userDataSet.setID("core_attributes");
 
 		Param session_token = result.findParam("sessionID");
 		if (session_token != null && !"".equals(session_token.toString())) {
 			session_token.setName("session_token");
 			securityDataSet.setParam(session_token);
+			//userDataSet.setParam(session_token);//this is done to avoid 2 service calls in app(for getting sessionID and userData)
 			result.removeParam(session_token);
 			LOG.debug("setting securityDataSet---END-sessionID is " + securityDataSet.getParam("session_token"));
 		}
 
-		LOG.debug("setting core_attributes---START");
-		Record userDataSet = new com.konylabs.middleware.dataobject.Record();
-		userDataSet.setID("core_attributes");
-
+		LOG.debug("setting user core_attributes---START");
 		Param user_id = result.findParam("userID");
 		Param userName = user_id;
 		if (user_id != null && !"".equals(user_id.toString())) {
@@ -41,6 +41,12 @@ public class LoginPostProcessor implements DataPostProcessor {
 			userDataSet.setParam(userName);
 			result.removeParam(user_id);
 			result.removeParam(userName);
+		}
+		
+		Param deviceKey = result.findParam("deviceKey");
+		if (deviceKey != null && !"".equals(deviceKey.toString())) {
+			userDataSet.setParam(deviceKey);
+			result.removeParam(deviceKey);
 		}
 		Param customer_id = result.findParam("uniqueID");
 		if (customer_id != null && !"".equals(customer_id.toString())) {
